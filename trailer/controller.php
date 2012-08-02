@@ -3,13 +3,22 @@ class Controller{
 
 	protected $before_filter;
 	protected $after_filter;
+	protected $model;
+	private $settings;
 
 	function __construct(){
+		$this->initialization();
 		$this->before_filter();
+		
 	}
 
 	function __destruct(){
 		$this->after_filter();
+	}
+
+	function initialization(){
+		$this->db = new Database();
+		$this->GetModelName();
 	}
 
 	# Controller filters
@@ -40,10 +49,15 @@ class Controller{
 	# rest actions
 
 	function index($params){
+		$Objects = new $this->model();
+		$Objects->all();
+	}
+
+	function show($params){
 
 	}
 
-	function new($params){
+	function _new($params){
 
 	}
 
@@ -62,5 +76,12 @@ class Controller{
 	function destroy($params){
 
 	}
+
+	# functions - utils
+
+	function GetModelName(){
+		$this-> model = str_replace('Controller','',get_class($this));
+	}
+
 }
 ?>

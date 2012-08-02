@@ -38,7 +38,7 @@ $route = $router->matchCurrentRequest();
 
 
 <?php 
-	T::exec($route->getTarget(),$route->getParameters())
+	T::exec($route->getTarget(),$route->getParameters());
 
 ?>
 

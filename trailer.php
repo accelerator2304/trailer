@@ -1,6 +1,6 @@
 <?php
-
 require_once 'settings.php';
+require_once 'trailer/core.php';
 
 
 function __autoload($class){
@@ -19,9 +19,9 @@ function __autoload($class){
 	}
 }
 
-$SETTINGS = new Settings();
+$Core = new Core();
 
-$DB = new Database($SETTINGS);
+
 
 
 

@@ -1,10 +1,9 @@
 <?php
-class Database{
-	protected $DB_SETTINGS;
-
-	function __construct($SETTINGS){
+class Database extends DbSettings{
+	
+	function __construct(){
 		
-		$this->DB_SETTINGS = $SETTINGS->get('DB_SETTINGS');
+		
 
 		require_once ("db_adapters/".$this->DB_SETTINGS['adapter'].".php");
 	}

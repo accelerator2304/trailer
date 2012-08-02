@@ -8,35 +8,47 @@ Class Model{
 	protected $Debug;
 	protected $Schema;
 
-	function __construct($Object,&$DB){
+	function __construct($Object = null){
 		$this->Object = $Object;
 		$this->Db  = $Database;
 		$this->init();
 	}
 
 	function init(){
-
-		$this->Entity = get_called_class();
-		$this->Table  = strtolower($this->Entity).'s';
-		print($this->Table);
-	}
-	
-	function get(){
-
+		$this->Table  = strtolower($this->Entity);
 	}
 
-	function get_all(){
+	function all(){
+		echo 'all';
+	}
+
+	function first(){
 
 	}
 
-	function set(){
+	function last(){
 
 	}
 
-	function set_all(){
+	function find(){
 
 	}
 
+	function count(){
+
+	}
+
+	function select($array){
+		$this->select = $array;
+	}
+
+	function order($string){
+		$this->order = $string;
+	}
+
+	function limit($string){
+		$this->limit = $string;
+	}
 
 }
 ?>
