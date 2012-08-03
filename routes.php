@@ -8,7 +8,7 @@ $router->setBasePath('');
 $router->map('/', 'SuplierController#index', array('methods' => 'GET'));
 $router->map('/users/', 'SuplierController:index', array('methods' => 'GET'));
 
-$router->map('/users/','users#create', array('methods' => 'POST', 'name' => 'users_create'));
+$router->map('/users/','SuplierController#index', array('methods' => 'POST', 'name' => 'users_create'));
 $router->map('/users/:id/edit/', 'SuplierController#index', array('methods' => 'GET', 'name' => 'users_edit', 'filters' => array('id' => '(\d+)')));
 $router->map('/contact/',array('controller' => 'someController', 'action' => 'contactAction'), array('name' => 'contact'));
 
