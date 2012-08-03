@@ -38,7 +38,7 @@ function autoloader($class){
 
 		if(substr_count($class,'controller') != 0){
 			$class = str_replace('controller','_controller',$class);
-			require_once "controllers/$class.php";
+			require_once "app/controllers/$class.php";
 		}
 
 	}

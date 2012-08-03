@@ -12,7 +12,7 @@ class Database extends DbSettings{
 		ActiveRecord\Config::initialize(function($cfg) use ($connections){
 
 
-		    $cfg->set_model_directory('models');
+		    $cfg->set_model_directory('app/models');
 		    $cfg->set_connections($connections);
 
 			// you can change the default connection with the below
