@@ -1,3 +1,6 @@
 [submodule "trailer/activerecord"]
 	path = trailer/activerecord
 	url = git://github.com/kla/php-activerecord.git
+[submodule "trailer/router"]
+	path = trailer/router
+	url = git://github.com/dannyvankooten/PHP-Router.git
