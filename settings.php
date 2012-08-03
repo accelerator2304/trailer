@@ -1,15 +1,37 @@
 <?php
 
-class DbSettings{
+class DbSettings extends GlobalSettings{
 
 	/* DATABASE SETTINGS */
 
-	protected $DB_SETTINGS = array(
+	protected $DEVELOPMENT = array(
 		'adapter' => 'mysql',
-		'db_host' => 'localhost',
-		'db_user' => 'root',
-		'db_pass' => '',
-		'db_name' => 'trailer',
+		'host'    => 'localhost',
+		'user' 	  => 'root',
+		'pass'    => '',
+		'base'    => 'trailer_development',
+		'prefix'  => 'nectarin_',
+		'debug'   => false,
+		'migrate' => true
+	);
+
+	protected $PRODUCTION = array(
+		'adapter' => 'mysql',
+		'host'    => 'localhost',
+		'user' 	  => 'root',
+		'pass'    => '',
+		'base'    => 'trailer_production',
+		'prefix'  => 'nectarin_',
+		'debug'   => false,
+		'migrate' => true
+	);
+
+	protected $TEST = array(
+		'adapter' => 'mysql',
+		'host'    => 'localhost',
+		'user' 	  => 'root',
+		'pass'    => '',
+		'base'    => 'trailer_production',
 		'prefix'  => 'nectarin_',
 		'debug'   => false,
 		'migrate' => true
@@ -17,4 +39,7 @@ class DbSettings{
 
 }
 
+class GlobalSettings{
+	var $PATH = __DIR__;
+}
 ?>
