@@ -9,12 +9,15 @@ class Database extends DbSettings{
 				'test' => $this->TEST['type'].'://'.$this->TEST['user'].':'.$this->TEST['password'].'@'.$this->TEST['host'].'/'.$this->TEST['database']
 		);
 
-		ActiveRecord\Config::initialize(function($cfg) use ($connections){
+		$env = $this->ENVIRONMENT;
+
+		ActiveRecord\Config::initialize(function($cfg) use ($connections,$env){
 
 
 		    $cfg->set_model_directory('app/models');
 		    $cfg->set_connections($connections);
-
+		    $cfg->set_default_connection($env);
+		    print($env);
 			// you can change the default connection with the below
 		    //$cfg->set_default_connection('production');
 			});
