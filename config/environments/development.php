@@ -14,11 +14,11 @@ class EnvSettings extends GlobalSettings{
 
 	protected $LOGGER_SETTINGS = array(
 		'stdout' => array(
-			'active' => true 
+			'active' => false 
 		),
 		'file' => array(
-			'active' => false,
-			'dir' => 'log/'
+			'active' => true,
+			'dir' => '/log'
 		),
 		'remote' => array(
 			'active' => false,
