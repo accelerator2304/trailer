@@ -41,5 +41,6 @@ class DbSettings extends GlobalSettings{
 
 class GlobalSettings{
 	var $PATH = __DIR__;
+	var $APP_NAME = 'Trailer';
 }
 ?>

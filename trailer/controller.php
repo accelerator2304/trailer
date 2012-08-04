@@ -50,7 +50,9 @@ class Controller{
 
 	function index($params){
 		$Objects = new $this->model();
-		print_r($Objects->all());
+		$Objects = $Objects->all();
+
+		print_r($Objects[1]->id);
 	}
 
 	function show($params){

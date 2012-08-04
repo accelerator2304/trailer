@@ -4,10 +4,10 @@ class Core{
 	var $PATH  = '';
 	
 	var $UTILS = array(
-		'router/route',
-		'router/router',
+		'modules/router/route',
+		'modules/router/router',
+		'modules/activerecord/ActiveRecord',
 		'database',
-		'activerecord/ActiveRecord',
 		'controller',
 		'utils'
 	);
