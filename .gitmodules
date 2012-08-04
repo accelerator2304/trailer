@@ -7,3 +7,12 @@
 [submodule "trailer/modules/migrations"]
 	path = trailer/modules/migrations
 	url = git://github.com/ruckus/ruckusing-migrations.git
+[submodule "trailer/modules/jade"]
+	path = trailer/modules/jade
+	url = git://github.com/NSinopoli/jade.php.git
+[submodule "trailer/modules/haml"]
+	path = trailer/modules/haml
+	url = git://github.com/wilkerlucio/limber-haml.git
+[submodule "trailer/modules/coffeescript"]
+	path = trailer/modules/coffeescript
+	url = git://github.com/alxlit/coffeescript-php.git
