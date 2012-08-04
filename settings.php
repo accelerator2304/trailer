@@ -5,33 +5,36 @@ class DbSettings extends GlobalSettings{
 	/* DATABASE SETTINGS */
 
 	protected $DEVELOPMENT = array(
-		'adapter' => 'mysql',
+		'type'    => 'mysql',
 		'host'    => 'localhost',
+		'port'    => 3306,
 		'user' 	  => 'root',
-		'pass'    => '',
-		'base'    => 'trailer_development',
+		'password'=> '',
+		'database'=> 'trailer_development',
 		'prefix'  => 'nectarin_',
 		'debug'   => false,
 		'migrate' => true
 	);
 
 	protected $PRODUCTION = array(
-		'adapter' => 'mysql',
+		'type'    => 'mysql',
 		'host'    => 'localhost',
+		'port'    => 3306,
 		'user' 	  => 'root',
-		'pass'    => '',
-		'base'    => 'trailer_production',
+		'password'=> '',
+		'database'=> 'trailer_production',
 		'prefix'  => 'nectarin_',
 		'debug'   => false,
 		'migrate' => true
 	);
 
 	protected $TEST = array(
-		'adapter' => 'mysql',
+		'type' 	  => 'mysql',
 		'host'    => 'localhost',
+		'port'    => 3306,
 		'user' 	  => 'root',
-		'pass'    => '',
-		'base'    => 'trailer_production',
+		'password'=> '',
+		'database'=> 'trailer_production',
 		'prefix'  => 'nectarin_',
 		'debug'   => false,
 		'migrate' => true
@@ -40,7 +43,13 @@ class DbSettings extends GlobalSettings{
 }
 
 class GlobalSettings{
+
 	var $PATH = __DIR__;
 	var $APP_NAME = 'Trailer';
+	var $TIMEZONE = 'Europe/Moscow';
+
+	function __construct(){
+		date_default_timezone_set($TIMEZONE);
+	}
 }
 ?>
