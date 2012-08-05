@@ -1,5 +1,5 @@
 <?php
-class Controller{
+class Controller extends Core{
 
 	protected $before_filter;
 	protected $after_filter;
@@ -7,6 +7,7 @@ class Controller{
 	private $settings;
 
 	function __construct(){
+		parent::__construct();
 		$this->initialization();
 		$this->before_filter();
 		
@@ -52,7 +53,8 @@ class Controller{
 		$Objects = new $this->model();
 		$Objects = $Objects->all();
 
-		print_r($Objects[1]->id);
+		#print_r($Objects);
+		$this->render();
 	}
 
 	function show($params){
