@@ -17,7 +17,6 @@ class Database extends DbSettings{
 		    $cfg->set_model_directory('app/models');
 		    $cfg->set_connections($connections);
 		    $cfg->set_default_connection($env);
-		    print($env);
 			// you can change the default connection with the below
 		    //$cfg->set_default_connection('production');
 			});

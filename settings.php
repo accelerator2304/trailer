@@ -1,5 +1,14 @@
 <?php
 
+class GlobalSettings{
+
+	var $PATH        = __DIR__;
+	var $APP_NAME    = 'Trailer';
+	var $TIMEZONE    = 'Europe/Moscow';
+	var $ENVIRONMENT = 'development';
+	var $TEMPLATE_ENGINE = 'Jade';
+}
+
 class DbSettings extends GlobalSettings{
 
 	/* DATABASE SETTINGS */
@@ -42,14 +51,9 @@ class DbSettings extends GlobalSettings{
 
 }
 
-class GlobalSettings{
 
-	var $PATH = __DIR__;
-	var $APP_NAME = 'Trailer';
-	var $TIMEZONE = 'Europe/Moscow';
 
-	function __construct(){
-		date_default_timezone_set($TIMEZONE);
-	}
-}
+
+
+
 ?>

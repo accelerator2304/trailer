@@ -1,16 +1,15 @@
 <?php 
-class SuplierController extends Controller{
+class SuplierController extends ApplicationController{
 
 
-	var $after_filter = array('bue');	
+	protected $after_filter = array('bue');	
+
 
 /*
 	function index($params){
 		print ('hello  '. $this->model);
 	}
 */
-	function bue(){
-		echo 'Bue!';
-	}
+
 }
 ?>
