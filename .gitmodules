@@ -16,6 +16,3 @@
 [submodule "trailer/modules/coffeescript"]
 	path = trailer/modules/coffeescript
 	url = git://github.com/alxlit/coffeescript-php.git
-[submodule "trailer/modules/logger"]
-	path = trailer/modules/logger
-	url = git://github.com/ilyai/logger.git
