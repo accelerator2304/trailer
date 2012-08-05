@@ -16,3 +16,9 @@
 [submodule "trailer/modules/coffeescript"]
 	path = trailer/modules/coffeescript
 	url = git://github.com/alxlit/coffeescript-php.git
+[submodule "trailer/modules/smarty"]
+	path = trailer/modules/smarty
+	url = git://github.com/potherca/Smarty.git
+[submodule "trailer/modules/less"]
+	path = trailer/modules/less
+	url = git://github.com/leafo/lessphp.git
