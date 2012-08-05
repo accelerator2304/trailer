@@ -12,20 +12,12 @@ class EnvSettings extends GlobalSettings{
 	);
 
 	protected $LOGGER_SETTINGS = array(
-		'stdout' => array(
-			'active' => true 
-		),
-		'file' => array(
-			'active' => false,
-			'dir' => 'log/'
-		),
-		'remote' => array(
-			'active' => false,
-			'hostname' => '',
-			'port' => 0,
-			'timeout' => 10
-		)
-	);
+		'stdout'  => false,
+		'file'    => true,
+		'browser' => true,
+		'dir'     => 'log/',
+		'env'     => 'test'
+		);
 }
 
 

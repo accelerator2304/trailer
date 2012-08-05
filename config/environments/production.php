@@ -11,21 +11,13 @@ class EnvSettings extends GlobalSettings{
 		'smtp_ssl'	=> false
 	);
 
-	protected $LOGGER_SETTINGS = array(
-		'stdout' => array(
-			'active' => false 
-		),
-		'file' => array(
-			'active' => true,
-			'dir' => 'log/'
-		),
-		'remote' => array(
-			'active' => false,
-			'hostname' => '',
-			'port' => 0,
-			'timeout' => 10
-		)
-	);
+	protected $LOGGER_SETTINGS =array(
+		'stdout'  => false,
+		'file'    => true,
+		'browser' => false,
+		'dir'     => 'log/',
+		'env'     => 'production'
+		);
 
 }
 

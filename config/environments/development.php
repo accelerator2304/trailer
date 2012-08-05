@@ -2,6 +2,7 @@
 
 class EnvSettings extends GlobalSettings{
 
+
 	protected $MAILER_SETTINGS = array(
 		'type' 		=> 'sendmail',	#sendmail or smtp
 		'smtp_host' => '',
@@ -13,20 +14,12 @@ class EnvSettings extends GlobalSettings{
 	);
 
 	protected $LOGGER_SETTINGS = array(
-		'stdout' => array(
-			'active' => false 
-		),
-		'file' => array(
-			'active' => true,
-			'dir' => '/log'
-		),
-		'remote' => array(
-			'active' => false,
-			'hostname' => '',
-			'port' => 0,
-			'timeout' => 10
-		)
-	);
+		'stdout'  => false,
+		'file'    => true,
+		'browser' => true,
+		'dir'     => 'log/',
+		'env'     => 'development'
+		);
 
 }
 
