@@ -1,7 +1,7 @@
-doctype 5
+!!! 5
 html
   head
-    title= pageTitle
+    title= $pageTitle
   body
     h1 Jade - node template engine
     #container
@@ -11,5 +11,6 @@ html
         p Get on it!
       
       	select
-          -foreach books as book
-            =option(value=book) Book #{book}
+          -foreach ($books as $id => $book):
+          	option(value:{{$id}})=$book.$id
+
