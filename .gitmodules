@@ -4,9 +4,6 @@
 [submodule "trailer/modules/activerecord"]
 	path = trailer/modules/activerecord
 	url = git://github.com/kla/php-activerecord.git
-[submodule "trailer/modules/migrations"]
-	path = trailer/modules/migrations
-	url = git://github.com/ruckus/ruckusing-migrations.git
 [submodule "trailer/modules/jade"]
 	path = trailer/modules/jade
 	url = git://github.com/NSinopoli/jade.php.git
@@ -22,3 +19,6 @@
 [submodule "trailer/modules/less"]
 	path = trailer/modules/less
 	url = git://github.com/leafo/lessphp.git
+[submodule "trailer/modules/migrations"]
+	path = trailer/modules/migrations
+	url = git://github.com/ruckus/ruckusing-migrations.git
