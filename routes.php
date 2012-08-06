@@ -6,11 +6,11 @@ $router->setBasePath('');
 
 
 $router->map('/', 'SuplierController#index', array('methods' => 'GET'));
-$router->map('/users/', 'SuplierController:index', array('methods' => 'GET'));
+$router->map('/users/:format', 'SuplierController:index', array('methods' => 'GET'));
 
-$router->map('/users/','SuplierController#index', array('methods' => 'POST', 'name' => 'users_create'));
-$router->map('/users/:id/edit/', 'SuplierController#index', array('methods' => 'GET', 'name' => 'users_edit', 'filters' => array('id' => '(\d+)')));
-$router->map('/contact/',array('controller' => 'someController', 'action' => 'contactAction'), array('name' => 'contact'));
+$router->map('/users/:format','SuplierController#index', array('methods' => 'POST', 'name' => 'users_create'));
+$router->map('/users/:id/edit.:format', 'SuplierController#index', array('methods' => 'GET', 'name' => 'users_edit', 'filters' => array('id' => '(\d+)')));
+$router->map('/contact/:format',array('controller' => 'someController', 'action' => 'contactAction'), array('name' => 'contact'));
 
 //$router->map('/blog/:slug', array('c' => 'BlogController', 'a' => 'showAction'));
 // capture rest of URL in "path" parameter (including forward slashes)
@@ -27,22 +27,10 @@ $router->map('/contact/',array('controller' => 'someController', 'action' => 'co
 
 $route = $router->matchCurrentRequest();
  
-
-?><h3>Current URL & HTTP method would route to: </h3>
-<?php if($route) { ?>
-	<strong>Target:</strong>
-	<pre><?php echo $route->getTarget(); ?></pre>
-
-	<strong>Parameters:</strong>
-	<pre><?php var_dump($route->getParameters()); ?></pre>
-
-
-<?php 
+ if($route) { 
 	T::exec($route->getTarget(),$route->getParameters());
 
-?>
-
-<?php } else { ?>
+ } else { ?>
 	<pre>No route matched.</pre>
 <?php } ?>
 
